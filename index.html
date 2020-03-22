@@ -1,2 +1,21 @@
 <script>
+	var arr = [10,10,10,10,20,30,30,30,30,30,30,30,40,40,40,40,40]
+	function getEventCount(arr){
+		var obj = {};
+		var totalPair = 0;
+		for (var i=0; i<arr.length;i++){
+			var item = arr[i];
+			if (obj[item] == undefined){
+				obj[item] = 1
+			}else {
+				obj[item]++
+			}if (obj[item] ==2 ){
+				totalPair++;
+				delete obj[item];
+			}
+		}
+		return totalPair
+	}
+	console.log(getEventCount(arr))
+
 </script>
